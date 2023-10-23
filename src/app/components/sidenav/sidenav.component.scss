@@ -1,0 +1,30 @@
+@import '../../app.component.scss';
+
+.sidenav-container {
+  nav {
+    ul {
+      li {
+        list-style: none;
+
+        button {
+          color: $palette-gray;
+
+          display: flex;
+          align-items: center;
+
+          width: 100%;
+
+          text-align: left;
+
+          padding: 1rem;
+          margin-left: 1rem;
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

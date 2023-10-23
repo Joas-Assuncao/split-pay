@@ -1,0 +1,14 @@
+<div class="sidenav-container">
+  <img src="/assets/images/split-pay-logo.svg" alt="Logo Split Pay" />
+
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <button routerLink="{{ item.name | lowercase }}">
+          <mat-icon color="accent">{{ item.icon }}</mat-icon>
+          <span color="accent">{{ item.name }}</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
