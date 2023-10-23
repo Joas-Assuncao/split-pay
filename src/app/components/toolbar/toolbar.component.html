@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <h2>{{ titlePage || "Title" }}</h2>
+
+  <form>
+    <mat-form-field>
+      <mat-label>Pesquisar </mat-label>
+      <input matInput placeholder="Ex. Consulta" />
+      <mat-icon matIconSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+
+  <div class="right-content">
+    <div class="icons">
+      <mat-icon class="mat-18">ligature</mat-icon>
+      <mat-icon class="mat-18">ligature</mat-icon>
+      <mat-icon class="mat-18">ligature</mat-icon>
+      <mat-icon class="mat-18">ligature</mat-icon>
+      <mat-icon class="mat-18">ligature</mat-icon>
+      <mat-icon class="mat-18">ligature</mat-icon>
+    </div>
+
+    <div class="profile">
+      <div class="column">
+        <span>Larissa Cardoso</span>
+        <mat-select placeholder="Unidade">
+          <mat-option selected [value]="'Unidade Barreiro'"
+            >Unidade Barreiro</mat-option
+          >
+          <mat-option [value]="'Unidade São Paulo'"
+            >Unidade São Paulo</mat-option
+          >
+          <mat-option [value]="'Unidade Belo Horizonte'"
+            >Unidade Belo Horizonte</mat-option
+          >
+        </mat-select>
+      </div>
+      <img src="/assets/images/avatar.svg" alt="Avatar" />
+    </div>
+  </div>
+</mat-toolbar>
