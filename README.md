@@ -1,5 +1,15 @@
 # SplitPay
 
+Developed project based on Figma prototype, sent by SplitPay for code testing
+
+## Used libs
+
+- Angular Material
+- Angular Forms
+- FullCalendar
+
+There are few libraries because it is a simple project, has no API connection and is not dynamic. It's just a landing-page. But, i always use best code practices!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
 
 ## Development server
