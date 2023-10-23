@@ -6,6 +6,17 @@
       li {
         list-style: none;
 
+        &.selected-item {
+          button {
+            background: $palette-orange;
+            color: #FFF;
+
+            mat-icon {
+              color: #FFF;
+            }
+          }
+        }
+
         button {
           color: $palette-gray;
 

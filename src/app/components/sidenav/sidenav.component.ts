@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IMenuItem } from 'src/app/models/menuItem';
+import { SharedDataService } from 'src/app/services/sharedDataService.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,6 +9,9 @@ import { IMenuItem } from 'src/app/models/menuItem';
 })
 export class SidenavComponent implements OnInit {
   menuItems!: IMenuItem[];
+  title!: string;
+
+  constructor(private sharedService: SharedDataService) {}
 
   ngOnInit() {
     this.menuItems = [
@@ -56,5 +60,9 @@ export class SidenavComponent implements OnInit {
         icon: 'help_outline',
       },
     ];
+
+    this.sharedService.getTitle$().subscribe((data) => {
+      this.title = data;
+    });
   }
 }
