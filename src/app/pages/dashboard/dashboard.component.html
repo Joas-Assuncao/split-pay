@@ -1,0 +1,72 @@
+<main class="container">
+  <div class="row">
+    <div class="notifications">
+      <app-notification
+        *ngFor="let item of notifications"
+        [icon]="item.icon"
+        [name]="item.name"
+        [notification]="item.notification"
+      ></app-notification>
+    </div>
+
+    <div class="search">
+      <span>Pesquise um profissional</span>
+      <div class="selects">
+        <div class="column">
+          <mat-select placeholder="Cidade">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+          <mat-select placeholder="Especialidade">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+          <mat-select placeholder="Serviço">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+        </div>
+        <div class="column">
+          <mat-select placeholder="Unidade">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+          <mat-select placeholder="Profissional">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+          <mat-select placeholder="Exame">
+            <mat-option>Selecione</mat-option>
+          </mat-select>
+        </div>
+      </div>
+      <button mat-raised-button (click)="(onClick)">Buscar</button>
+    </div>
+
+    <div class="tasks">
+      <header>
+        <button mat-raised-button>Tarefas</button>
+        <button mat-icon-button>
+          <mat-icon aria-label="Add tasks">add</mat-icon>
+        </button>
+      </header>
+
+      <div class="tasks-list">
+        <div class="task">
+          <mat-slide-toggle color="primary" labelPosition="before"
+            >Comprar carro</mat-slide-toggle
+          >
+          <strong>11/10/23 7:00</strong>
+        </div>
+        <div class="task">
+          <mat-slide-toggle color="primary" labelPosition="before"
+            >Levar telefone</mat-slide-toggle
+          >
+          <strong>11/10/23 7:00</strong>
+        </div>
+        <div class="task">
+          <mat-slide-toggle color="primary" labelPosition="before"
+            >Comprar moto</mat-slide-toggle
+          >
+          <strong>11/10/23 7:00</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-calendar></app-calendar>
+</main>
