@@ -1,1 +1,90 @@
+@use '@angular/material' as mat;
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import './app/app.component.scss';
+
+$split-pay-primary-palette: (
+  100: lighten($palette-orange, 35%),
+  500: $palette-orange,
+  700: darken($palette-orange, 15%),
+
+  contrast: (100: lighten($palette-orange, 35%),
+    500: $palette-orange,
+    700: darken($palette-orange, 15%),
+  )
+);
+
+$split-pay-accent-palette: (
+  100: lighten($palette-gray, 35%),
+  500: $palette-gray,
+  700: darken($palette-gray, 15%),
+
+  contrast: (100: lighten($palette-gray, 35%),
+    500: $palette-gray,
+    700: darken($palette-gray, 15%),
+  )
+);
+
+$split-pay-warn-palette: (
+  100: lighten(#E54E4E, 35%),
+  500: #E54E4E,
+  700: darken(#E54E4E, 15%),
+
+  contrast: (100: lighten(#E54E4E, 35%),
+    500: #E54E4E,
+    700: darken(#E54E4E, 15%),
+  )
+);
+
+$my-primary: mat.define-palette($split-pay-primary-palette, 500);
+$my-accent: mat.define-palette($split-pay-accent-palette, 500);
+$my-warn: mat.define-palette($split-pay-warn-palette, 500);
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+        accent: $my-accent,
+        warn: $my-warn,
+      ),
+    ));
+
+@include mat.all-component-themes($my-theme);
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0 auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer-container {
+  height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
